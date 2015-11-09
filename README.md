@@ -1,0 +1,2 @@
+# NoteManager
+C#/.NET application
