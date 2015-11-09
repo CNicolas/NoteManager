@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4967296b-0e75-433e-9cda-cfe882baa733" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55041/NoteManagerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NoteManagerService.xsd" MetadataType="Schema" ID="be0dd8f8-e6e6-4b2b-b358-1214b0ac174c" SourceId="1" SourceUrl="http://localhost:55041/NoteManagerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="NoteManagerService.wsdl" MetadataType="Wsdl" ID="68e51c88-1590-4cb1-9763-367ca9136720" SourceId="1" SourceUrl="http://localhost:55041/NoteManagerService.svc?wsdl" />
+    <MetadataFile FileName="NoteManagerService1.xsd" MetadataType="Schema" ID="1ac462c5-b6f1-4153-8136-12a69843c3af" SourceId="1" SourceUrl="http://localhost:55041/NoteManagerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="NoteManagerService2.xsd" MetadataType="Schema" ID="13590d82-33af-4df0-ba9f-09f6052ee255" SourceId="1" SourceUrl="http://localhost:55041/NoteManagerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="NoteManagerService.disco" MetadataType="Disco" ID="b29181f8-0259-4a7e-b641-5a0526220af1" SourceId="1" SourceUrl="http://localhost:55041/NoteManagerService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

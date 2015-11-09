@@ -1,0 +1,76 @@
+﻿<Page x:Class="NoteManager.Pages.NotePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NoteManager.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="NotePage"
+      DataContext="{Binding Note,Source={StaticResource Locator}}">
+
+    <Page.Resources>
+        <Style x:Key="Textbox" TargetType="{x:Type TextBox}">
+            <Setter Property="Foreground" Value="Black" />
+        </Style>
+        <Style x:Key="NameTextBox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource Textbox}">
+            <Setter Property="Margin" Value="10,10,10,5" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="MessageTextBox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource Textbox}">
+            <Setter Property="Margin" Value="10,5,10,5" />
+        </Style>
+
+        <Style x:Key="Placeholder" TargetType="{x:Type TextBlock}">
+            <Setter Property="Visibility" Value="Hidden" />
+            <Setter Property="IsHitTestVisible" Value="False" />
+            <Setter Property="Foreground" Value="LightGray" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="2,2,2,2" />
+        </Style>
+        <Style x:Key="PlaceholderName" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource Placeholder}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Text, ElementName=nameTextBox}" Value="">
+                    <Setter Property="Visibility" Value="Visible" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="PlaceholderMessage" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource Placeholder}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Text, ElementName=messageTextBox}" Value="">
+                    <Setter Property="Visibility" Value="Visible" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="Bisque">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="0" Grid.RowSpan="1" Grid.Column="2" Grid.ColumnSpan="5" Text="{Binding Name}" Style="{StaticResource NameTextBox}" x:Name="nameTextBox" />
+        <TextBlock Grid.Row="0" Grid.RowSpan="1" Grid.Column="2" Grid.ColumnSpan="5" Text="Name" Style="{StaticResource PlaceholderName}" />
+
+        <TextBox Grid.Row="1" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="9" Text="{Binding Message}" Style="{StaticResource MessageTextBox}" AcceptsReturn="True" x:Name="messageTextBox" />
+        <TextBlock Grid.Row="1" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="9" Text="Message" Style="{StaticResource PlaceholderMessage}" />
+
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Content="Liste des notes" Command="{Binding GoToNotesListCommand}" Margin="5,5,5,5" />
+        <Button Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="3" Content="Enregistrer" Command="{Binding SaveNoteCommand}" Margin="5,5,5,5" />
+    </Grid>
+</Page>

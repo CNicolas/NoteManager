@@ -1,0 +1,48 @@
+14/08/2015 12:25:15	 [DEBUG] NoteManagerWCF.NoteManagerService debug
+14/08/2015 12:25:15	 [ERROR] NoteManagerWCF.NoteManagerService error
+14/08/2015 12:25:15	 [INFO] NoteManagerWCF.NoteManagerService info
+14/08/2015 12:25:15	 [WARN] NoteManagerWCF.NoteManagerService warn
+14/08/2015 12:26:02 [DEBUG] NoteManagerWCF.NoteManagerService 	debug
+14/08/2015 12:26:02 [ERROR] NoteManagerWCF.NoteManagerService 	error
+14/08/2015 12:26:02 [INFO] NoteManagerWCF.NoteManagerService 	info
+14/08/2015 12:26:02 [WARN] NoteManagerWCF.NoteManagerService 	warn
+14/08/2015 12:27:01 [DEBUG]	NoteManagerWCF.NoteManagerService	debug
+14/08/2015 12:27:01 [ERROR]	NoteManagerWCF.NoteManagerService	error
+14/08/2015 12:27:01 [INFO]	NoteManagerWCF.NoteManagerService	info
+14/08/2015 12:27:01 [WARN]	NoteManagerWCF.NoteManagerService	warn
+14/08/2015 14:27:02 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE]
+14/08/2015 14:27:02 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE] : note.NAME => [toto]
+14/08/2015 14:27:08 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE]
+14/08/2015 14:27:08 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE] : note.NAME => [toto]
+14/08/2015 14:56:37 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE]
+14/08/2015 14:58:11 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] Nb de resultat : [2]
+14/08/2015 15:01:50 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] Nb de resultat : [1]
+14/08/2015 15:02:50 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] Nb de resultat : [1]
+14/08/2015 15:03:12 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] Nb de resultat : [3]
+14/08/2015 15:03:16 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] Nb de resultat : [1]
+14/08/2015 15:04:53 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[toto] [Nb de resultat]=>[3]
+14/08/2015 15:04:58 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[Up] [Nb de resultat]=>[1]
+14/08/2015 15:07:01 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[up] [Nb de resultat]=>[1]
+14/08/2015 15:07:06 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE]
+14/08/2015 15:07:06 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE] : note.NAME => [totoUpdatek]
+14/08/2015 15:07:13 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[z] [Nb de resultat]=>[0]
+14/08/2015 15:07:23 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[up] [Nb de resultat]=>[1]
+14/08/2015 15:09:42 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE]
+14/08/2015 15:09:42 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE] : note.NAME => [toto1]
+14/08/2015 15:09:45 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[u] [Nb de resultat]=>[2]
+14/08/2015 15:49:13 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE]
+14/08/2015 15:49:13 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE] : note.NAME => [toto]
+14/08/2015 15:49:18 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[Voici la ] [Nb de resultat]=>[1]
+16/08/2015 13:14:57 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE]
+16/08/2015 13:14:57 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE] : note.NAME => [totoUpdate1]
+16/08/2015 13:15:14 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[titi] [Nb de resultat]=>[0]
+16/08/2015 13:15:41 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[1] [Nb de resultat]=>[2]
+16/08/2015 13:22:19 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[t] [Nb de resultat]=>[4]
+16/08/2015 13:22:27 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[t] [Nb de resultat]=>[4]
+05/10/2015 10:20:53 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE]
+05/10/2015 10:20:53 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE] : note.NAME => [tayoUpdate]
+05/10/2015 10:22:10 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE]
+05/10/2015 10:22:10 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION UPDATE] : note.NAME => [tayoUpdate]
+05/10/2015 10:22:15 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[t] [Nb de resultat]=>[4]
+05/10/2015 10:22:19 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[ta] [Nb de resultat]=>[1]
+05/10/2015 10:22:24 [INFO]	NoteManagerWCF.NoteManagerService	[FONTION RECHERCHE] [MOT]=>[encore] [Nb de resultat]=>[1]

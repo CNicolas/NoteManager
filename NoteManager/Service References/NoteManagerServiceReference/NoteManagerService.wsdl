@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NoteManagerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55041/NoteManagerService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55041/NoteManagerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55041/NoteManagerService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NoteManagerWCF.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INoteManagerService_ConnectUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectUser" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_ConnectUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_SaveNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNote" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_SaveNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_UpdateNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNote" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_UpdateNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_DeleteNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNote" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_DeleteNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_ListAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_ListAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_ListAllNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllNotes" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_ListAllNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_ListAllNotesOfUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllNotesOfUser" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_ListAllNotesOfUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllNotesOfUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_RechercheNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechercheNote" />
+  </wsdl:message>
+  <wsdl:message name="INoteManagerService_RechercheNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechercheNoteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INoteManagerService">
+    <wsdl:operation name="ConnectUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoteManagerService/ConnectUser" message="tns:INoteManagerService_ConnectUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoteManagerService/ConnectUserResponse" message="tns:INoteManagerService_ConnectUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoteManagerService/SaveNote" message="tns:INoteManagerService_SaveNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoteManagerService/SaveNoteResponse" message="tns:INoteManagerService_SaveNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoteManagerService/UpdateNote" message="tns:INoteManagerService_UpdateNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoteManagerService/UpdateNoteResponse" message="tns:INoteManagerService_UpdateNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoteManagerService/DeleteNote" message="tns:INoteManagerService_DeleteNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoteManagerService/DeleteNoteResponse" message="tns:INoteManagerService_DeleteNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoteManagerService/ListAllUsers" message="tns:INoteManagerService_ListAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoteManagerService/ListAllUsersResponse" message="tns:INoteManagerService_ListAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAllNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoteManagerService/ListAllNotes" message="tns:INoteManagerService_ListAllNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoteManagerService/ListAllNotesResponse" message="tns:INoteManagerService_ListAllNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAllNotesOfUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoteManagerService/ListAllNotesOfUser" message="tns:INoteManagerService_ListAllNotesOfUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoteManagerService/ListAllNotesOfUserResponse" message="tns:INoteManagerService_ListAllNotesOfUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechercheNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoteManagerService/RechercheNote" message="tns:INoteManagerService_RechercheNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoteManagerService/RechercheNoteResponse" message="tns:INoteManagerService_RechercheNote_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INoteManagerService" type="tns:INoteManagerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConnectUser">
+      <soap:operation soapAction="http://tempuri.org/INoteManagerService/ConnectUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNote">
+      <soap:operation soapAction="http://tempuri.org/INoteManagerService/SaveNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNote">
+      <soap:operation soapAction="http://tempuri.org/INoteManagerService/UpdateNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNote">
+      <soap:operation soapAction="http://tempuri.org/INoteManagerService/DeleteNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllUsers">
+      <soap:operation soapAction="http://tempuri.org/INoteManagerService/ListAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllNotes">
+      <soap:operation soapAction="http://tempuri.org/INoteManagerService/ListAllNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllNotesOfUser">
+      <soap:operation soapAction="http://tempuri.org/INoteManagerService/ListAllNotesOfUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechercheNote">
+      <soap:operation soapAction="http://tempuri.org/INoteManagerService/RechercheNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NoteManagerService">
+    <wsdl:port name="BasicHttpBinding_INoteManagerService" binding="tns:BasicHttpBinding_INoteManagerService">
+      <soap:address location="http://localhost:55041/NoteManagerService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

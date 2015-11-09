@@ -1,0 +1,105 @@
+﻿<Page x:Class="NoteManager.Pages.NotesListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NoteManager.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="NotesListPage"
+      DataContext="{Binding NotesList,Source={StaticResource Locator}}">
+
+    <Page.Resources>
+        <Style x:Key="ItemTextBlock" TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="Button" TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        <Style x:Key="ButtonDelete" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="DeleteBorder" CornerRadius="50" BorderBrush="Black" Background="Red" BorderThickness="1" />
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="Black" TargetName="DeleteBorder"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Height" Value="15" />
+            <Setter Property="Width" Value="15" />
+            <Setter Property="Content" Value="X" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="Bisque">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <ListView Grid.ColumnSpan="9" ItemsSource="{Binding NotesList}" SelectedItem="{Binding SelectedNote}" Margin="10,30,10,10" Grid.Row="1">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="430">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Style="{StaticResource ItemTextBlock}" Text="{Binding Name}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Date de Création" Width="130">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Style="{StaticResource ItemTextBlock}" Text="{Binding Creation}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Date de Modification" Width="130">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Style="{StaticResource ItemTextBlock}" Text="{Binding Modification}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Supprimer" Width="63">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource ButtonDelete}" Content="X" Command="{Binding Path=DataContext.DeleteNoteCommand, RelativeSource={RelativeSource AncestorType=Page}}" CommandParameter="{Binding}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource Button}" Content="Nouvelle Note" Command="{Binding NewNoteCommand}" />
+        <Button Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="3" Style="{StaticResource Button}" Content="Autre chose" IsEnabled="False"/>
+        <Button Grid.Row="9" Grid.Column="6" Grid.ColumnSpan="3" Style="{StaticResource Button}" Content="Quitter" Command="{Binding QuitCommand}" />
+        <TextBox Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="35" Margin="10,28,0,0" Grid.RowSpan="2" Text="{Binding Recherche}" x:Name="rechercheTextBox" VerticalAlignment="Top" Width="425"/>
+        <Button x:Name="button" Grid.ColumnSpan="4" Content="Rechercher" Command="{Binding RechercheCommand}" Grid.Column="5" HorizontalAlignment="Left" Margin="33,28,0,0" VerticalAlignment="Top" Width="294" Grid.RowSpan="2" Height="35"/>
+
+    </Grid>
+</Page>
